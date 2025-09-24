@@ -1,0 +1,33 @@
+package group1.DayOfWeekFinder;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class DayOfWeekFinder {
+    public String findNextDayOfWeek(String startDate, String dayOfWeek) {
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            LocalDate date = LocalDate.parse(startDate, formatter);
+
+            DayOfWeek targetDay = DayOfWeek.valueOf(dayOfWeek.toUpperCase()); //peab suurteks tähtedeks muutma, sest dayofweek ootab kindlat formaati
+            int startValue = date.getDayOfWeek().getValue(); //praeguse kuupäeva nädalapäev ja tema number vastavalt dayOfWeek väärtusele
+            int targetValue = targetDay.getValue(); //soovitava päeva väärtus numbrites
+
+            int daysToAdd = (targetValue - startValue + 7) % 7; //modulo mitte jagamine
+            if (daysToAdd == 0) { //kui vastus on 0, siis on tegemist sama päevaga ning lisada 7
+                daysToAdd = 7;
+            }
+            LocalDate nextDate = date.plusDays(daysToAdd); //uus muutuja nextDate kuhu lisan date kuupäevale need päevad, mis vastusest sain
+
+            return nextDate.toString(); //prindime vastuse
+
+        }
+        catch (Exception e) {
+            return "Error";
+        }
+    }
+}
+
+//DayOfWeek on enum ehk siis loetelu, kus on nädalapäevad suurtes tähtedes. Igal päeval on ka numbriline väärtus
+//Ehk siis nt MONDAY.getValue() -> 1
