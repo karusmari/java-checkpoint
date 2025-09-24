@@ -39,3 +39,10 @@ public class TodoList {
         }
     }
 }
+
+// teen klassi millel on massiiv taskidest, ma annan talle ka capacity ja count
+// konstruktoris annan capacity väärtuse, loon uue massiivi taskidest ja count on 0
+// teen meetodi addTask, mis võtab descriptioni, kui count on väiksem kui capacity, siis loon uue taski ja lisan selle massiivi, seejärel suurendan counti
+// teen meetodi setStatus, mis võtab indexi ja statusi, kui index on kehtiv, siis muudan taski staatust
+// teen meetodi setDescription, mis võtab indexi ja uue descriptioni, kui index on kehtiv, siis muudan taski descriptioni
+// teen meetodi displayTasks, mis loopib läbi kõik taskid ja prindib descriptioni ja staatuse kindlas vormis

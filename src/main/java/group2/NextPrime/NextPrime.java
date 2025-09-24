@@ -26,7 +26,7 @@ public class NextPrime {
     }
 }
 
-//kontrollin,kas number, mis sisse tuleb on väiksem kui 2, kui on, siis tagastan 2 - 2 on esimene prime number
+//kontrollin,kas number, mis sisse tuleb on väiksem kui 2, kui on, siis tagastan 2 - see on esimene prime number
 //kui number on suurem kui 2, siis alustan tsüklit, mis algab numbrist n+1 ja lõpeb n*2 - see on sellepärast, et prime number on alati väiksem kui 2 korda see number
 //tsüklis kontrollin, kas number on prime, kasutades isPrime meetodit
 //kui leian prime numbri, siis tagastan selle

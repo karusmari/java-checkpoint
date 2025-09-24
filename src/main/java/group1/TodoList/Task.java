@@ -30,3 +30,8 @@ public class Task {
     }
 
 }
+
+//loon klassi millel on description ja status
+//loon konstruktoris descriptioni ja status on alati NEW sest kui luuakse uus task siis on ta alati new
+//teen getteri ja setteri descriptionile
+//teen getteri ja setteri statusile
