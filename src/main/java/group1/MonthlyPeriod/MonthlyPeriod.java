@@ -19,11 +19,11 @@ public class MonthlyPeriod {
             int years = Math.abs(period.getYears());
 
             StringBuilder result = new StringBuilder();
-            if (years >= 1) {
+            if (years > 0) {
                 result.append(years).append(years == 1 ? " year" : " years");
             }
-            if (months >= 1) {
-                if (!result.isEmpty()) {
+            if (months > 0) {
+                if (years > 0) {
                     result.append(" and ");
                 }
                 result.append(months).append(months == 1 ? " month" : " months");
