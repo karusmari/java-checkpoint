@@ -7,8 +7,8 @@ public class TodoList {
 
     public TodoList(int capacity) {
         this.capacity = capacity;
-        this.tasks = new Task[capacity];
         this.count = 0;
+        this.tasks = new Task[capacity];
     }
 
     public void addTask(String description) {
@@ -31,7 +31,7 @@ public class TodoList {
     }
 
     public void displayTasks() {
-        System.out.print("Tasks:\n");
+        System.out.println("Tasks: ");
         for (int i = 0; i < count; i++) {
             String desc = tasks[i].getDescription();
             String status = tasks[i].getStatus().toString();

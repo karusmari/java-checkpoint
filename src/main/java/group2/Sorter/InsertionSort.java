@@ -3,18 +3,19 @@ package group2.Sorter;
 public class InsertionSort extends Sorter {
     @Override
     public void sort() {
-        int[] array = getArray();
+        int[] arr = getArray();
+        int n = arr.length;
 
-        for (int i = 1; i < array.length; i++) {
-            int key = array[i];
+        for (int i = 1; i < n; i++) {
+            int key = arr[i];
             int j = i - 1;
-            while (j >= 0 && array[j] > key) {
-                array[j + 1] = array[j];
+            while (j >= 0 && arr[j] > key) {
+                arr[j+1] = arr[j];
                 j--;
             }
-            array[j + 1] = key;
+            arr[j + 1] = key;
         }
-        setArray(array);
+        setArray(arr);
     }
 }
 

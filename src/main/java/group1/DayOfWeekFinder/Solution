@@ -31,3 +31,16 @@ public class DayOfWeekFinder {
 
 //DayOfWeek on enum ehk siis loetelu, kus on nädalapäevad suurtes tähtedes. Igal päeval on ka numbriline väärtus
 //Ehk siis nt MONDAY.getValue() -> 1
+
+
+// koigepealt loon muutujad formatter, mis võtab vastu kuupäeva formaadi
+// siis loon muutuja date, mis võtab vastu startDate ja kindlas formaadis
+// siis loon muutuja targetDay, mis võtab vastu dayOfWeek ja muudab selle suurteks tähtedeks, sest DayOfWeek enum on suurte tähtedega
+// siis loon muutuja startValue, mis võtab vastu date muutuja nädalapäeva ja tema numbri (nt esmaspäev on 1)
+// siis loon muutuja targetValue, mis võtab vastu targetDay numbri (numbrid on 1-7)
+// siis loon muutuja daysToAdd, mis arvutab välja mitu päeva on vaja lisada, et jõuda soovitud nädalapäevani.
+// arvutus tähendab, et võtan targetValue-st startValue, lisan 7 (et vältida negatiivset arvu) ja võtan tulemuse mod 7 (et saada järelejäänud päevad nädalas)
+// kui daysToAdd on 0, siis tähendab see, et soovitud päev on täna, seega pean lisama 7 päeva, et saada järgmine sama päev järgmisel nädalal
+// siis loon muutuja nextDate, mis võtab vastu date ja lisab sellele daysToAdd päeva
+// lõpuks tagastan nextDate stringina
+// kui tekib mingi error, siis tagastan "Error"

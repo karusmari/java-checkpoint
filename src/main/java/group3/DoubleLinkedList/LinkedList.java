@@ -1,3 +1,5 @@
+package group3.DoubleLinkedList;
+
 public interface LinkedList {
     int at(int index);
     void add(int value);

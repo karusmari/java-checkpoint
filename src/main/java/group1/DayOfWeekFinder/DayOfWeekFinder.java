@@ -10,7 +10,7 @@ public class DayOfWeekFinder {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             LocalDate date = LocalDate.parse(startDate, formatter);
 
-            DayOfWeek targetDay = DayOfWeek.valueOf(dayOfWeek.toUpperCase());
+            DayOfWeek targetDay = DayOfWeek.valueOf(dayOfWeek.toUpperCase()); //see tähendab, et muudab koik tähed suureks
 
             int startValue = date.getDayOfWeek().getValue();
             int targetValue = targetDay.getValue();
